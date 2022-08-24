@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #fcfaf9;
+}
+
+.wrapper {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #5fbff7;
+  width: max-content;
+  border-radius: 6px;
+
+  &.game-over {
+    background: #e67171;
+  }
+  &.win {
+    background: #69e8af;
+  }
+
+  .status {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .board {
+    .game-status {
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .cell {
+      background: #fcfaf9;
+      border: 1px solid rgb(137, 120, 209);
+      border-radius: 4px;
+      float: left;
+      line-height: 45px;
+      text-align: center;
+      min-width: 45px;
+      height: 45px;
+      cursor: pointer;
+      color: #333333;
+      font-weight: 600;
+      transition: background-color 300ms linear;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .hidden {
+      background: #333333;
+    }
+
+    .is-flag,
+    .is-bomb {
+      color: #fc543c;
+    }
+  }
+}
+.inputs-block {
+  margin: 20px;
+  width: 200px;
+  border: 1px solid rgb(137, 120, 209);
+  border-radius: 6px;
+  padding: 10px;
+  border: 1px solid rgb(137, 120, 209);
+
+  h1 {
+    margin-bottom: 25px;
+  }
+  p {
+    margin-top: 10px;
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+    border-radius: 5px;
+    border: 0;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid rgb(137, 120, 209);
+  }
+}
+
+.app {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  width: 80%;
+  margin: 5px;
+  cursor: pointer;
+  background-color: #fff;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  font-size: 15px;
+  border: 1px solid rgb(137, 120, 209);
+}
